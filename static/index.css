@@ -1,0 +1,241 @@
+@import url('https://fonts.cdnfonts.com/css/common-pixel');
+@import url('https://fonts.cdnfonts.com/css/SpaceType');
+@import url('https://fonts.cdnfonts.com/css/source-sans-pro');
+body {
+    /* background-image: url(island.jpg); */
+    background: url(background_images/user_ver_background.png) no-repeat center fixed;     
+    background-size: cover;
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.header{
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+    height: 2em;
+    width: 100%;
+    display: relative;
+}
+.header h2 {
+    color: #fff;
+    font-size: 10vw;
+    font-family: 'SpaceType', sans-serif;
+    position: absolute;
+    top: 5vh; 
+    left: 0;
+    width: 100%; 
+}
+.header h2:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 5px white;
+}
+.header h2:nth-child(2) {
+    -webkit-text-stroke: 5px #FFF9BA;
+    color: #FCC651;
+    animation: animate 2s ease-in-out infinite;
+}
+@keyframes animate {
+    0%,
+    100% {
+        clip-path: polygon(
+            0% 45%,
+            16% 44%,
+            33% 50%,
+            54% 60%,
+            70% 61%,
+            84% 59%,
+            100% 52%,
+            100% 100%,
+            0% 100%
+            );
+    }
+
+    50% {
+        clip-path: polygon(
+            0% 60%,
+            15% 65%,
+            34% 66%,
+            51% 62%,
+            67% 50%,
+            84% 45%,
+            100% 46%,
+            100% 100%,
+            0% 100%
+            );
+    }
+}
+
+.star{
+    display: flex;
+    background-color: #FFF9BA;
+    position: absolute;
+    border-radius: 100%;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes move_right {
+    from { transform: rotate(0deg) translateX(8px) rotate(0deg); }
+        to   { transform: rotate(360deg) translateX(8px) rotate(-360deg); }
+    }
+@keyframes move_left {
+    from { transform: rotate(0deg) translateX(8px) rotate(0deg); }
+        to   { transform: rotate(-360deg) translateX(8px) rotate(360deg); }
+}
+
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 380px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -400px;
+    margin: 20vh auto;
+}
+
+.wrapper-signup{
+    position: relative;
+    width: 400px;
+    height: 380px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.wrapper .form-box{
+    width: 100%;
+    padding: 30px;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+/* Design for user inputs */
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+    color: rgb(255, 255, 255);
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: orange;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+
+.btn{
+    font-family: 'SpaceType', sans-serif;
+    margin: 5px;
+    font-size: 20px;
+    border: 5px solid #fff;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    border: hwb(0 100% 0%) 5px solid;
+    padding: 0.25em 1em;
+    border-radius: 30px;
+    box-shadow: inset 0 0 0.5em 0 #fff, 0 0 0.5em 0 #8e007b;
+    background-color: transparent;
+}
+.btn::before {
+    pointer-events: none;
+    position: absolute;
+    content: "";
+    background: transparent;
+    border-radius: 15px;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(1em);
+    opacity: 0.7;
+}
+.btn::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em #ff00de;
+    opacity: 0;
+    background-color: transparent;
+    box-shadow: inset 0 0 0.5em 0 #ff00de, 0 0 0.5em 0 #ff00de;
+    z-index: -1;
+    border-radius: 15px;
+    transition: opacity 100ms cubic-bezier(0, 0.35, 0.58, 1);
+}
+.btn:hover,
+.btn:focus {
+    color: #fff;
+    box-shadow: inset 0 0 0.5em 0 rgba(238, 235, 235, 0), 0 0 0.5em 0 rgba(255, 255, 255, 1);
+    border: 5px solid #ffe9fc;
+}
+.btn.prev {
+    margin-right: 3px;
+    font-size: 17px;
+}
+.btn.next {
+    margin-left: 3px;
+}
+#form p {
+    color: #fff;
+}
+#form a {
+    color: #FFF9BA;
+}
+#form a:visited {
+    color: #FCC651;
+}

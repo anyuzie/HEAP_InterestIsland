@@ -1,0 +1,187 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .startup{
+    /* background-image: url(island.jpg); */
+    background: url(background_images/starting_background.png) no-repeat center fixed;     
+    background-size: cover;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .content {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .content h2 {
+    color: #fff;
+    font-size: 10vw;
+    font-family: 'SpaceType', sans-serif;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+  
+  .content h2:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 5px white;
+    text-align: center;
+  }
+  
+  .content h2:nth-child(2) {
+    -webkit-text-stroke: 5px #78c1fc;
+    color: #3a42a4;
+    animation: animate 4s ease-in-out infinite;
+  }
+  
+  @keyframes animate {
+    0%,
+    100% {
+      clip-path: polygon(
+        0% 45%,
+        16% 44%,
+        33% 50%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 52%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  
+    50% {
+    clip-path: polygon(
+        0% 60%,
+        15% 65%,
+        34% 66%,
+        51% 62%,
+        67% 50%,
+        84% 45%,
+        100% 46%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  }
+  
+  *,
+  *::before,
+  *::after {
+  box-sizing: border-box;
+  }
+  
+  .startup-1 {
+    display: inline-block;
+    margin: 0 auto;
+    font-family: 'Pacifico', cursive;
+    font-size: 5vw;
+    border: none;
+    color: #fff9ba;
+    text-align: center;
+    text-shadow: 
+    1px 5px 4px hsl(44, 100%, 59%), 
+          0 0 2px #fbd2ff, 
+          0 0 10px #fbd2ff, 
+          0 0 20px #fbd2ff, 
+          0 0 30px #fbd2ff, 
+          0 0 40px #fcdaff, 
+          0 0 70px #ffffff, 
+          0 0 80px #ffffff,
+          0 0 100px #ffffff;
+  }
+  
+  .frame {
+    display: inline-block;
+    margin: 0 auto;
+    font-family: 'SpaceType', sans-serif;  
+  }
+  
+  button {
+    font-size: 2vw;
+    max-width: 100%;
+  }
+  
+  .neon-button {
+    text-align: center;
+    border: 5px solid #ffffffbd;
+   
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    border: hwb(0 100% 0%) 5px solid;
+    padding: 0.25em 1em;
+    border-radius: 75px;
+    box-shadow: inset 0 0 0.5em 0 #ffffff, 0 0 0.5em 0 #8e007b;
+    position: relative;
+    background-color: transparent;
+  }
+  
+  .neon-button::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: #c7f7ff;
+    border-radius: 75px;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(1em);
+    opacity: 0.7;
+  }
+  
+  .neon-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em #ff00de;
+    opacity: 0;
+    background-color: transparent;
+    box-shadow: inset 0 0 0.5em 0 #ff00de, 0 0 0.5em 0 #ff00de;
+    z-index: -1;
+    border-radius: 75px;
+    transition: opacity 100ms cubic-bezier(0, 0.35, 0.58, 1);
+  }
+  
+  .neon-button:hover,
+  .neon-button:focus {
+    color: #fff;
+      box-shadow: inset 0 0 0.5em 0 rgba(238, 235, 235, 0), 0 0 0.5em 0 rgba(255, 255, 255, 1);
+      border: 5px solid #ffe9fc;
+  }
+  
+  .neon-button:hover::before,
+  .neon-button:focus::before {
+    opacity: 1;
+  }
+  .neon-button:hover::after,
+  .neon-button:focus::after {
+    opacity: 1;
+  }
+  a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  a:active {
+    text-decoration: none;
+  }

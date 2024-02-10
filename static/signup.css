@@ -1,0 +1,10 @@
+@import url('https://fonts.cdnfonts.com/css/common-pixel');
+@import url('https://fonts.cdnfonts.com/css/SpaceType');
+@import url('https://fonts.cdnfonts.com/css/source-sans-pro');
+
+body {
+    /* background-image: url(island.jpg); */
+    background: url(background_images/user_ver_background.png) no-repeat center fixed;     
+    background-size: cover;
+    text-align: center;
+}
